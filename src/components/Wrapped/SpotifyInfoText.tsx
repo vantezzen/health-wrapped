@@ -9,18 +9,18 @@ function SpotifyInfoText({ onContinue }: { onContinue: () => void }) {
     <WrappedContainer bg="bg-zinc-900" text="text-starship-400">
       <FatHeading>Better with Spotify</FatHeading>
       <MutedText className="!text-zinc-200 max-w-xl mx-auto">
-        Wrapped for TikTok can play fitting songs during your Wrapped using the
-        Spotify Player.
+        Wrapped for Apple Health can play fitting songs during your Wrapped
+        using the Spotify Player.
         <br />
         <br />
         If you have Spotify Premium, simply log in to your Spotify in your
-        browser - no need to connect your account to Wrapped for TikTok! Wrapped
-        for TikTok won't have access to your Spotify data, but simply embed the
-        Spotify Player.
+        browser - no need to connect your account to Wrapped for Apple Health!
+        Wrapped for Apple Health won't have access to your Spotify data, but
+        simply embed the Spotify Player.
         <br />
         <br />
         If you don't have Spotify Premium, you can still fully use Wrapped for
-        TikTok - just without the music.
+        Apple Health - just without the music.
       </MutedText>
 
       <Button

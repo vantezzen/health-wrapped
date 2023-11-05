@@ -110,9 +110,9 @@ const items = [
     question: "How does Wrapped for Apple Health work?",
     answer: (
       <>
-        Wrapped for TikTok uses your Apple Health data export to calculate your
-        Wrapped. We use Apple's exported data about steps, heart rate, and more
-        and generate statistics based on that.
+        Wrapped for Apple Health uses your Apple Health data export to calculate
+        your Wrapped. We use Apple's exported data about steps, heart rate, and
+        more and generate statistics based on that.
       </>
     ),
   },

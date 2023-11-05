@@ -23,7 +23,7 @@ module.exports = withSentryConfig(
     silent: true,
 
     org: "vantezzen",
-    project: "wrapped-for-tiktok",
+    project: "wrapped-for-health",
   },
   {
     // For all available options, see:

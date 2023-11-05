@@ -25,27 +25,50 @@ export default class SleepStatistic extends Statistic<SleepStatisticResult> {
         ["", 0] as [string, number] // [date, time in milliseconds]
       );
 
-    // Number of naps taken during the day
-    // A nap is defined as a sleep that is shorter than 2 hours and starts between 6am and 6pm
-    const totalNapsTaken =
+    // Apple Watch will store naps in shorter parts (e.g 10:00-10:15, 10:17-10:32 instead of one 10:00-10:32) so
+    // we first need to cluster the naps together
+    const sleepClusters =
       this.wrapped.userData.HKCategoryTypeIdentifierSleepAnalysis?.reduce(
         (acc, cur) => {
-          const startDate = new Date(cur.startDate);
-          const endDate = new Date(cur.endDate);
-          const diff = endDate.getTime() - startDate.getTime();
-
+          const prevCluster = acc[acc.length - 1];
           if (
-            diff > 1000 * 60 &&
-            diff < 2 * 60 * 60 * 1000 &&
-            startDate.getHours() >= 6 &&
-            startDate.getHours() < 18
+            prevCluster &&
+            Math.abs(cur.startDate.getTime() - prevCluster.endDate.getTime()) <
+              20 * 60 * 1000 // 20 minutes
           ) {
-            return acc + 1;
+            prevCluster.endDate = cur.endDate;
+            return acc;
           }
-          return acc;
+
+          return [
+            ...acc,
+            {
+              startDate: cur.startDate,
+              endDate: new Date(cur.endDate),
+            },
+          ];
         },
-        0
+        [] as Array<{
+          startDate: Date;
+          endDate: Date;
+        }>
       );
+
+    // Number of naps taken during the day
+    const totalNapsTaken = sleepClusters?.reduce((acc, cur) => {
+      const startDate = new Date(cur.startDate);
+      const endDate = new Date(cur.endDate);
+      const diff = endDate.getTime() - startDate.getTime();
+
+      if (diff < 4 * 60 * 60 * 1000 && diff > 60 * 1000) {
+        // 4 hours < duration < 1 minute
+        if (startDate.getHours() >= 11 && startDate.getHours() <= 20) {
+          // Between 11:00 and 20:00
+          return acc + 1;
+        }
+      }
+      return acc;
+    }, 0);
 
     const totalSleep =
       this.wrapped.userData.HKCategoryTypeIdentifierSleepAnalysis?.reduce(

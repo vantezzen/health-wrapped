@@ -20,7 +20,7 @@ function Audio({ statistics }: WrappedSlideProps) {
   return (
     <WrappedContainer>
       <InfoText className="animate-in slide-in-from-bottom fade-in duration-1000">
-        Your Watched warned you about loud music
+        Your Watch warned you about loud music
       </InfoText>
       <FatHeading className="animate-in slide-in-from-bottom fade-in duration-1000">
         <CountUp end={statistics.audio.audioExposureEvents!} duration={2} />{" "}

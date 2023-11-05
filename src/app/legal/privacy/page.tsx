@@ -7,7 +7,7 @@ function Terms() {
   return (
     <LegalPage>
       <Head>
-        <title>Wrapped for TikTok - Privacy Policy</title>
+        <title>Wrapped for Apple Health - Privacy Policy</title>
         <meta name="robots" content="noindex" />
       </Head>
 
@@ -15,13 +15,13 @@ function Terms() {
         <h1>Privacy Policy</h1>
 
         <p>
-          This privacy policy ("Policy") explains how Wrapped for TikTok LLC
+          This privacy policy ("Policy") explains how Wrapped for Apple Health
           ("we", "us" or "our") collects, uses, and discloses your personal
-          information when you use our web application Wrapped for TikTok
-          ("Service"), which provides personalized statistics on your TikTok
-          usage. This Policy also explains your rights and choices regarding
-          your personal information and how you can contact us if you have any
-          questions or concerns.
+          information when you use our web application Wrapped for Apple Health
+          ("Service"), which provides personalized statistics on your Apple
+          Health usage. This Policy also explains your rights and choices
+          regarding your personal information and how you can contact us if you
+          have any questions or concerns.
         </p>
         <p>
           By accessing or using the Service, you agree to this Policy. If you do

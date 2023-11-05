@@ -7,7 +7,7 @@ function Terms() {
   return (
     <LegalPage>
       <Head>
-        <title>Wrapped for TikTok - Impressum</title>
+        <title>Wrapped for Apple Health - Impressum</title>
         <meta name="robots" content="noindex" />
       </Head>
 

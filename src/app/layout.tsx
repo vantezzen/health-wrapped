@@ -5,8 +5,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Wrapped for TikTok",
-  description: "Get insights into your time on TikTok 🚀",
+  title: "Wrapped for Apple Health",
+  description: "Get insights into your activity 🚀",
 };
 
 export default function RootLayout({

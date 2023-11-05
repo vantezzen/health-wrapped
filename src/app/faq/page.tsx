@@ -13,7 +13,7 @@ function FaqPage() {
       <Faq />
 
       <Link href="/">
-        <Button>Back to Wrapped for TikTok</Button>
+        <Button>Back to Wrapped for Apple Health</Button>
       </Link>
     </WrappedContainer>
   );

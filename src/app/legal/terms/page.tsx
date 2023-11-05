@@ -7,7 +7,7 @@ function Terms() {
   return (
     <LegalPage>
       <Head>
-        <title>Wrapped for TikTok - Terms of Service</title>
+        <title>Wrapped for Apple Health - Terms of Service</title>
         <meta name="robots" content="noindex" />
       </Head>
 
@@ -16,9 +16,9 @@ function Terms() {
 
         <p>
           These terms of service ("Terms") govern your access and use of Wrapped
-          for TikTok ("Service"), a web application that provides personalized
-          statistics on your TikTok usage. The Service is provided by Wrapped
-          for TikTok LLC ("we", "us" or "our").
+          for Apple Health ("Service"), a web application that provides
+          personalized statistics on your Apple Health usage. The Service is
+          provided by Wrapped for Apple Health ("we", "us" or "our").
         </p>
         <p>
           By accessing or using the Service, you agree to be bound by these
