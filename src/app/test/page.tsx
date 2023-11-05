@@ -30,7 +30,7 @@ function TestPage() {
               const records = xml.getElementsByTagName("Record");
               for (const record of records) {
                 const jsonRecord: any = {};
-                const type = record.getAttribute("type");
+                const type = record.getAttribute("type") as string;
                 for (const attribute of record.attributes) {
                   if (attribute.name === "type") continue;
                   jsonRecord[attribute.name] = attribute.value;
