@@ -51,7 +51,7 @@ export async function GET(request: Request) {
             value={data.totalWalkingDistance}
           />
           <TableRow
-            title="Total excercise time"
+            title="Total exercise time"
             value={data.totalExcerciseTime}
           />
           <TableRow title="Flights climbed" value={data.flightsClimbed} />
